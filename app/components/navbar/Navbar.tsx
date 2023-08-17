@@ -10,14 +10,14 @@ import NavItem from "./NavItem";
 import ProfilePicture from "./ProfilePicture";
 const Navbar = () => {
     return ( 
-    <nav className="sticky flex flex-col items-center h-[92vh] w-72 backdrop-blur-xl bg-[rgba(255,255,255,0.1)] border-[rgba(255,255,255,0.8)] rounded-xl mx-4 my-10 border text-white">
+    <nav className="flex flex-col items-center h-full sm:w-20 lg:w-72 rounded-r-lg bg-[#52736E] text-[#f4f4f4]">
         <div className="w-full h-20 flex justify-between items-center px-6">
-            <span className="font-bold text-xl text-rose-500">JOMSIGHT</span>
+            <span className="font-bold text-xl text-[#f4f4f4] hidden lg:block">JOMSIGHT</span>
             <span className="bg-white/30 rounded p-1"><BiSolidDashboard size={20}/></span>
         </div>
         <Separator/>
         <div className="my-6 flex flex-col w-full px-6">
-            <span className="text-xs text-rose-500">ANALYTICS</span>
+            <span className="text-xs text-[#f4f4f4]/50 hidden lg:block">ANALYTICS</span>
             <NavItem iconClassName={<BsEvStation size={20}/>} menuName="Charge Stations"/>
             <NavItem iconClassName={<IoCarSportSharp size={20}/>} menuName="Sessions"/>
             <NavItem iconClassName={<IoBatteryCharging size={20}/>} menuName="Energy"/>
@@ -27,14 +27,14 @@ const Navbar = () => {
         </div>
         <Separator/>
         <div className="my-6 flex flex-col w-full px-6">
-            <span className="text-xs text-rose-500">SERVICES</span>
+            <span className="text-xs text-[#f4f4f4]/50 hidden lg:block">SERVICES</span>
             <NavItem iconClassName={<RiCustomerService2Fill size={20}/>} menuName="Help Center"/>
             <NavItem iconClassName={<FaTicketAlt size={20}/>} menuName="Tickets"/>
             <NavItem iconClassName={<MdOutlineBugReport size={20}/>} menuName="Bug Report"/>
         </div>
         <Separator/>
         <div className="my-6 flex flex-col w-full px-6">
-            <span className="text-xs text-rose-500">GENERAL</span>
+            <span className="text-xs text-[#f4f4f4]/50 hidden lg:block">GENERAL</span>
             <NavItem iconClassName={<RiSettings3Fill size={20}/>} menuName="Settings"/>
             <NavItem iconClassName={<MdPowerSettingsNew size={20}/>} menuName="Log Out"/>
         </div>

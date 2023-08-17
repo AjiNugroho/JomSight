@@ -3,7 +3,7 @@ import React from "react";
 import { Chart as ChartJS, registerables } from 'chart.js';
 import { Bar } from 'react-chartjs-2'
 ChartJS.register(...registerables);
-ChartJS.defaults.color = '#ffffff';
+ChartJS.defaults.color = '#121212';
 
 interface BarChartProps {
     data: {
@@ -31,7 +31,7 @@ const BarChart: React.FC<BarChartProps> = ({data}) => {
         y: {
           grid: {
             display:true,
-            color:'white'
+            color:'#121212'
           }
         },
         x: {

@@ -7,10 +7,10 @@ import MonthlyRevenue from './components/ChartComponent/MonthlyRevenue'
 import UtilizationRate from './components/ChartComponent/UtilizationRate'
 export default function Home() {
   return (
-    <div className='flex flex-col m-10 z-10 w-full gap-2 text-white'>
+    <div className='flex flex-col m-10 z-10 w-full gap-2'>
       <section className='flex flex-col w-full gap-4'>
         <h1 className='text-3xl font-bold'>Overview</h1>
-        <div className='flex gap-2 justify-between'>
+        <div className='flex gap-2 lg:justify-between'>
           <WidgetComponent icon={<FaExchangeAlt size={20}/>} label="Transaction" value="200" growth={17} isGrow/>
           <WidgetComponent icon={<FaUserFriends size={20}/>} label="Users" value="1.2M" growth={20} isGrow/>
           <WidgetComponent icon={<MdCurrencyExchange size={20}/>} label="Revenue" value="50M" growth={5.21} isGrow={false}/>
@@ -18,7 +18,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className='flex w-full h-3/6 mt-4 gap-2'>
+      <section className='flex flex-col w-full h-3/6 mt-4 gap-2 lg:flex-row '>
         <div className=' w-full'>
           <MonthlyRevenue/>
         </div>

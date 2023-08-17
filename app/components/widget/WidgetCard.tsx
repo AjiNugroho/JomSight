@@ -6,7 +6,7 @@ interface WidgetCardprops{
 
 const WidgetCard:React.FC<WidgetCardprops> = ({children}) => {
     return ( 
-        <div className="bg-white/20 rounded-lg border w-1/4 h-[200px] backdrop-blur-md">
+        <div className="bg-[#52736e] rounded-lg border w-auto sm:h-auto lg:w-1/4 lg:h-[200px] text-white">
             {children}
         </div>
      );

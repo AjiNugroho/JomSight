@@ -17,12 +17,12 @@ const NavItem: React.FC<NavbarItemProps> = ({iconClassName,menuName,children}) =
     return ( 
     <div className="relative mt-2">
         <button
-        className="flex items-center w-full p-2 text-left transition duration-300 rounded-md 
-        hover:border-r-[0.5px] hover:border-b-0 hover:border-l-0 hover:border-t-[0.5px] hover:shadow-lg"
+        className="flex items-center w-full p-1 text-left transition duration-300 rounded-md border border-[#52736e]
+        hover:text-[#ffd682] hover:border-[#ffd682]"
         onClick={toogleOpen}
         >
             <span className="mr-2">{iconClassName}</span>
-            <span>{menuName}</span>
+            <span className="hidden lg:block">{menuName}</span>
             {children && (isOpen ? <HiChevronDown /> : <HiChevronRight />)}
         </button>
     </div> 

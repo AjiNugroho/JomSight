@@ -7,7 +7,7 @@ interface ChartContainerProps{
 const ChartContainer:React.FC<ChartContainerProps> = ({children}) => {
     return ( 
         
-        <div className=" bg-white/20 rounded-lg border h-full w-full mb-4 text-white">
+        <div className=" bg-[#ffd682] rounded-lg border h-full w-full mb-4 text-[#121212]">
             {children}
         </div>
         

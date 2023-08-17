@@ -9,7 +9,7 @@ const chartData = {
       {
         label: 'revenue',
         data: [12, 19, 3, 5, 2],
-        backgroundColor: '#03e9f4',
+        backgroundColor: '#52736e',
         borderColor: '#ffffff'
       },
     ],
