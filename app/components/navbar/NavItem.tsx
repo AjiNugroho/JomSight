@@ -17,7 +17,7 @@ const NavItem: React.FC<NavbarItemProps> = ({iconClassName,menuName,children}) =
     return ( 
     <div className="relative mt-2">
         <button
-        className="flex items-center w-full p-1 text-left transition duration-300 rounded-md border border-[#52736e]
+        className="flex items-center w-full p-1 text-left transition duration-300 rounded-md border border-[#1e2b29]
         hover:text-[#ffd682] hover:border-[#ffd682]"
         onClick={toogleOpen}
         >

@@ -10,7 +10,7 @@ import NavItem from "./NavItem";
 import ProfilePicture from "./ProfilePicture";
 const Navbar = () => {
     return ( 
-    <nav className="flex flex-col items-center h-full sm:w-20 lg:w-72 rounded-r-lg bg-[#52736E] text-[#f4f4f4]">
+    <nav className="sticky flex flex-col items-center h-full sm:w-20 lg:w-72 rounded-r-lg bg-[#1e2b29] text-[#f4f4f4]">
         <div className="w-full h-20 flex justify-between items-center px-6">
             <span className="font-bold text-xl text-[#f4f4f4] hidden lg:block">JOMSIGHT</span>
             <span className="bg-white/30 rounded p-1"><BiSolidDashboard size={20}/></span>
