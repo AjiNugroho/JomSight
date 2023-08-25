@@ -23,7 +23,7 @@ const PieChart: React.FC<PieChartProps> = ({data,title}) => {
     plugins:{
       legend:{
         position:"bottom" as "bottom",
-        align:"center" as "center",
+        align:"start" as "start",
       },
       title: {
         display: Boolean(title),

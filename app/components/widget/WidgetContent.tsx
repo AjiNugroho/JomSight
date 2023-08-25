@@ -4,9 +4,11 @@ interface WidgetContentProps{
 }
 const WidgetContent:React.FC<WidgetContentProps> = ({data}) => {
     return ( 
-        <div className='flex w-full items-center sm:justify-center lg:justify-normal lg:mx-6 lg:my-2 '>
-            <span className="sm:text-2xl lg:text-4xl font-extrabold">{data}</span>
-        </div>
+        <>
+        <span className=" text-5xl font-normal min-w-[100px] ms-4">{data}</span>
+        </>
+            
+        
      );
 }
  

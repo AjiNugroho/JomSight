@@ -9,21 +9,19 @@ interface NavbarItemProps{
 }
 
 const NavItem: React.FC<NavbarItemProps> = ({iconClassName,menuName,children}) => {
-    const [isOpen,setIsOpen] = useState(false);
-
-    const toogleOpen=()=>{
-        setIsOpen((isOpen)=>!isOpen)
-    }
+    
     return ( 
-    <div className="relative mt-2">
+    <div className="w-full px-4 group relative hover:text-[#ffdb8f]">
+        <div className="absolute h-[20px] w-[20px] top-3 left-0 
+        bg-gradient-to-r from-[#ffdb8f] from-10% via-white/20 via-10% to-transparent to-80% hidden group-hover:block ">
+
+        </div>
         <button
-        className="flex items-center w-full p-1 text-left transition duration-300 rounded-md border border-[#1e2b29]
-        hover:text-[#ffd682] hover:border-[#ffd682]"
-        onClick={toogleOpen}
+        className="flex justify-start w-full p-1 text-left mt-2
+        transition-transform transform duration-300 group-hover:translate-x-2"
         >
             <span className="mr-2">{iconClassName}</span>
-            <span className="hidden lg:block">{menuName}</span>
-            {children && (isOpen ? <HiChevronDown /> : <HiChevronRight />)}
+            <span className="font-bold text-md">{menuName}</span>
         </button>
     </div> 
     );

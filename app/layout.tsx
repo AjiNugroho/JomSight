@@ -1,9 +1,14 @@
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/Navbar'
 import ClientOnly from './components/ClientOnly'
-import ContentContainer from './components/content/ContentContainer'
+import ContentContainer from './components/content/ContentLayout'
+import TopNav from './components/navbar/TopNav'
+import StickyLeft from './components/navbar/Stickyleft'
+import NewNavbar from './components/navbar/NewNavbar'
+import ContentLayout from './components/content/ContentLayout'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -21,10 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunito.className}>
           <ClientOnly>
-            <div className='flex w-full lg:h-full'>
-              <Navbar/>
+            <ContentLayout>
               {children}
-            </div>
+            </ContentLayout>
           </ClientOnly>
       </body>
     </html>

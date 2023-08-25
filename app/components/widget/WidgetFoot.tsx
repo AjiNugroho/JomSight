@@ -1,6 +1,6 @@
 'use client'
 
-import {BsArrowDownShort,BsArrowUpShort} from 'react-icons/bs'
+import {BiSolidUpArrow,BiSolidDownArrow} from 'react-icons/bi'
 
 interface WidgetFootProps{
     growtValue:number
@@ -9,19 +9,21 @@ interface WidgetFootProps{
 
 const WidgetFoot:React.FC<WidgetFootProps> = ({growtValue,isGrow}) => {
     return ( 
-        <div className="flex w-full mx-4 my-2 items-center gap-1 lg:my-4">
+        <div className="flex px-4">
             {isGrow?(
-            <div className='text-lime-500 flex items-center'>
-                <BsArrowUpShort size={24}/>
-                {growtValue}%
+            <div className='text-lime-500 flex items-center gap-1'>
+                <BiSolidUpArrow size={20}/>
+                <span className='text-base font-normal'>{growtValue}%</span>
+                
+                
             </div>
             ):(
-            <div className='text-red-500 flex items-center'>
-                <BsArrowDownShort size={24}/>
-                {growtValue}%
+            <div className='text-red-500 flex items-center gap-1'>
+                <BiSolidDownArrow size={20}/>
+                <span className='text-base font-normal'>{growtValue}%</span>
+                
             </div>
             )}
-            <span>growth</span>
         </div>
      );
 }
