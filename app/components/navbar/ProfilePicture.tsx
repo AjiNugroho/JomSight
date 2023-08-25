@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const ProfilePicture = () => {
     return ( 
-    <div className='flex w-full mt-5 py-4 px-6 gap-4 items-center'>
-        <div className='flex w-16 h-16 '>
+    <div className='flex w-full gap-4 items-center'>
+        <div className='flex w-10 h-10'>
             <Image
             src="/propic.jpeg"
             width={100}
@@ -12,11 +12,6 @@ const ProfilePicture = () => {
             objectFit='cover'
             style={{objectFit:"cover",borderRadius:"50px"}}
             />
-        </div>
-
-        <div>
-            <span className='font-bold'>AMIRUL</span><br/>
-            <span className='font-thin text-xs'>Bussiness Analyst</span>
         </div>
     </div>
     

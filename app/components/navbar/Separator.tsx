@@ -1,6 +1,6 @@
 'use client'
 const Separator = () => {
-    return ( <div className="h-[2px] w-5/6 bg-gradient-to-r from-transparent via-white/50 to-transparent"></div> );
+    return ( <div className="h-[2px] w-full my-4"></div> );
 }
  
 export default Separator;

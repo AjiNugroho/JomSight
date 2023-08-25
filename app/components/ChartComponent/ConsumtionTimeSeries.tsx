@@ -1,37 +1,33 @@
-'use client'
 
 import BarChart from "../charts/BarChart";
 import ChartContainer from "../charts/ChartContainer";
-import {createGradient} from "../charts/GradientCreator"
 
-
-const chartData = {
-    labels: ['January', 'February', 'March', 'April', 'May'],
+const Data = {
+    labels: ['January', 'February', 'March', 'April', 'May','June','July','August','September','October','November','December'],
     datasets: [
       {
-        label: 'revenue',
-        data: [12, 19, 3, 5, 2],
+        label: 'duration',
+        data: [12,13,14,25,20,23,25,30,28,28,30,29],
         backgroundColor: '#52736e',
         borderColor: '#ffffff'
       },
     ],
   };
-
-const MonthlyRevenue = () => {
-    return (
+const ConsumtionTimeSeries = () => {
+    return ( 
         <ChartContainer>
           <div className="flex flex-col w-full">
             <div className="flex px-8 py-4 justify-center text-2xl font-bold">
-              Gained Revenue by Months
+              Session Duration Over Time
             </div>
             <div className="px-10">
-              <BarChart data={chartData}/>
+              <BarChart data={Data}/>
             </div>
         
           </div>
             
         </ChartContainer>
-      );
+     );
 }
  
-export default MonthlyRevenue;
+export default ConsumtionTimeSeries;

@@ -15,9 +15,9 @@ const ClientOnly:React.FC<clientOnlyProps> = ({children}) => {
         return null
     }
     return ( 
-    <div className="w-full">
-        {children}
-    </div>
+    <>
+    {children}
+    </>
     );
 }
  

@@ -11,15 +11,21 @@ interface WidgetProps {
   label: string;
   growth:number;
   isGrow:boolean;
+  bgColor?:string;
 }
 
-const WidgetComponent:React.FC<WidgetProps> = ({icon,value,label,growth,isGrow}) => {
+const WidgetComponent:React.FC<WidgetProps> = ({icon,value,label,growth,isGrow,bgColor}) => {
     return ( 
-        <WidgetCard>
-            <div className='flex flex-col'>
-                <WidgetHead icon={icon} desc={label}/>
-                <WidgetContent data={value}/>
-                <WidgetFoot growtValue={growth} isGrow={isGrow}/>
+        <WidgetCard bgColor={bgColor}>
+            <div className={`flex flex-col h-full items-center pb-2 ${bgColor?'text-black':''}`}>
+                <div className='w-full'>
+                    <WidgetHead icon={icon} desc={label}/>
+                </div>
+                <div className='flex w-full py-2 gap-2 justify-center'>
+                    <WidgetContent data={value}/>
+                    <WidgetFoot growtValue={growth} isGrow={isGrow}/>
+                </div>
+                
             </div>
         </WidgetCard>
      );
